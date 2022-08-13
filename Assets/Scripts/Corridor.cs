@@ -18,6 +18,10 @@ public class Corridor
         else
             orientation = CorridorOrientation.Vertical;
     }
+
+    public CorridorOrientation Orientation { get => orientation; }
+    public Room Room1 { get => room1; }
+    public Room Room2 { get => room2; }
 }
 
 public enum CorridorOrientation

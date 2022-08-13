@@ -84,4 +84,15 @@ public class DungeonGenerator : MonoBehaviour
         if (randomNumber <= 0.75f) return new Vector2Int(nextCoords.x, nextCoords.y - 1);
         return new Vector2Int(nextCoords.x, nextCoords.y + 1);
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Dungeon dungeon = CreateDungeon(settings);
+            FindObjectOfType<MapUI>().CreateDungeonMapUI(dungeon);
+        }
+
+
+    }
 }
